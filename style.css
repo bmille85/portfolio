@@ -1,0 +1,225 @@
+/* Base styles */
+body {
+  font-family: 'Verdana', 'Arial', sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f0, #e0f7fa);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #ff66b2, #6600cc);
+  color: white;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation links */
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hero Section (if used) */
+.hero {
+  background: url('images/halftone-bg.png'), radial-gradient(circle, #fffacd, #fcb6f4);
+  background-size: cover;
+  text-align: center;
+  padding: 4rem 1rem;
+  color: #222;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #ff3399;
+  text-shadow: 2px 2px #fff;
+}
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  background: #ffcc00;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff66b2;
+  color: #fff;
+}
+
+/* Project grid */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 2rem;
+}
+
+.project {
+  background: white;
+  border: 2px dashed #ff66b2;
+  border-radius: 15px;
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: scale(1.05);
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #6600cc;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.contact-section {
+  max-width: 700px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #fff0f6, #f0faff);
+  border: 3px dotted #ff66b2;
+  border-radius: 20px;
+  box-shadow: 8px 8px #ffcce6;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.6rem;
+  color: #cc0099;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .form-group.full-width {
+  grid-column: span 2;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #6600cc;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid #ff99cc;
+  border-radius: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  background: white;
+  box-shadow: inset 1px 1px 3px #ffd9e6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #cc0099;
+  box-shadow: 0 0 0 3px #ffccff;
+}
+
+.contact-form .btn {
+  grid-column: span 2;
+  margin-top: 1rem;
+  justify-self: center;
+  background: #ffcc00;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 #ff66b2;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form .btn:hover {
+  background: #ff66b2;
+  color: white;
+  transform: translateY(-2px);
+}
+main {
+  padding: 0 1.5rem;
+}
+
+/* About Section Container */
+.about-section {
+  max-width: 900px;
+  margin: 5rem auto;
+  padding: 3rem 2rem;
+  background: linear-gradient(145deg, #fff0f6, #e0f7fa);
+  border-radius: 20px;
+  border: 2px dotted #cc0099;
+  box-shadow: 6px 6px #ffcce6;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* Ensure text and columns don’t touch the edges on smaller screens */
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+@media (max-width: 700px) {
+  .about-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .about-section {
+    padding: 2rem 1.2rem;
+  }
+
+  .about-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .resume-btn {
+    width: 100%;
+  }
+}
