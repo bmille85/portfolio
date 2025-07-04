@@ -106,7 +106,6 @@ footer {
 }
 
 .contact-section h1 {
-  font-family: 'Press Start 2P', cursive;
   font-size: 1.6rem;
   color: #cc0099;
   margin-bottom: 1rem;
@@ -222,4 +221,15 @@ main {
   .resume-btn {
     width: 100%;
   }
+}
+
+.project-image {
+  max-width: 800px;   /* Limit the image width */
+  width: 100%;        /* Responsive scaling */
+  display: block;     /* Remove inline spacing */
+  margin: 2rem auto;  /* Center image with top/bottom spacing */
+  padding: 10px;      /* Optional padding inside the image container */
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;   /* Optional: gives padding a background */
 }
