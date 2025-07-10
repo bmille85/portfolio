@@ -1,11 +1,19 @@
 /* Base styles */
-body {
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   font-family: 'Verdana', 'Arial', sans-serif;
   background: linear-gradient(to bottom right, #ffe6f0, #e0f7fa);
   line-height: 1.6;
-  margin: 0;
-  padding: 0;
   color: #222;
+  display: flex;
+  flex-direction: column; /* Sticky footer support */
+}
+
+main {
+  flex: 1; /* Pushes footer to bottom if content is short */
+  padding: 0 1.5rem;
 }
 
 /* Header styles */
@@ -14,6 +22,17 @@ header {
   color: white;
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  align-items: center; /* Vertically align logo & links */
+}
+
+nav .logo img {
+  height: 40px; /* Adjust size as needed */
+  width: auto; /* Keeps aspect ratio */
+  margin-right: .5rem; /* Space between logo and links */
 }
 
 /* Navigation links */
@@ -26,7 +45,7 @@ nav a {
   letter-spacing: 1px;
 }
 
-/* Hero Section (if used) */
+/* Hero Section */
 .hero {
   background: url('images/halftone-bg.png'), radial-gradient(circle, #fffacd, #fcb6f4);
   background-size: cover;
@@ -41,22 +60,43 @@ nav a {
   text-shadow: 2px 2px #fff;
 }
 
-/* Button styles */
-.btn {
+/* Buttons (shared styles) */
+button,
+.btn,
+.resume-btn,
+.contact-form .btn,
+a.btn {
   display: inline-block;
+  grid-column: span 2;
+  margin-top: 1rem;
+  justify-self: center;
   background: #ffcc00;
   color: #000;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 30px;
   font-weight: bold;
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  text-decoration: none;
   transition: all 0.3s ease;
+  box-shadow: 4px 4px 0 #ff66b2;
+  border: none;
+  cursor: pointer;
 }
 
-.btn:hover {
+button:hover,
+.btn:hover,
+.resume-btn:hover,
+.contact-form .btn:hover,
+a.btn:hover {
   background: #ff66b2;
-  color: #fff;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Add spacing below buttons to avoid footer overlap */
+.project-detail .btn,
+.everyday-meals .btn {
+  margin-bottom: 3rem;
 }
 
 /* Project grid */
@@ -85,15 +125,19 @@ nav a {
   border-radius: 10px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #6600cc;
-  color: white;
-  font-size: 0.9rem;
+/* Project detail images */
+.project-image {
+  max-width: 800px;
+  width: 100%;
+  display: block;
+  margin: 2rem auto;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
+/* Contact section */
 .contact-section {
   max-width: 700px;
   margin: 5rem auto;
@@ -158,32 +202,7 @@ footer {
   box-shadow: 0 0 0 3px #ffccff;
 }
 
-.contact-form .btn {
-  grid-column: span 2;
-  margin-top: 1rem;
-  justify-self: center;
-  background: #ffcc00;
-  color: #000;
-  font-weight: bold;
-  border-radius: 30px;
-  padding: 12px 24px;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-  box-shadow: 4px 4px 0 #ff66b2;
-  border: none;
-  cursor: pointer;
-}
-
-.contact-form .btn:hover {
-  background: #ff66b2;
-  color: white;
-  transform: translateY(-2px);
-}
-main {
-  padding: 0 1.5rem;
-}
-
-/* About Section Container */
+/* About section */
 .about-section {
   max-width: 900px;
   margin: 5rem auto;
@@ -196,7 +215,6 @@ main {
   box-sizing: border-box;
 }
 
-/* Ensure text and columns don’t touch the edges on smaller screens */
 .about-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -205,6 +223,7 @@ main {
   text-align: left;
 }
 
+/* Responsive adjustments */
 @media (max-width: 700px) {
   .about-columns {
     grid-template-columns: 1fr;
@@ -217,19 +236,15 @@ main {
   .about-section h1 {
     font-size: 1.5rem;
   }
-
-  .resume-btn {
-    width: 100%;
-  }
 }
 
-.project-image {
-  max-width: 800px;   /* Limit the image width */
-  width: 100%;        /* Responsive scaling */
-  display: block;     /* Remove inline spacing */
-  margin: 2rem auto;  /* Center image with top/bottom spacing */
-  padding: 10px;      /* Optional padding inside the image container */
-  border-radius: 12px;
-  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.1);
-  background: #fff;   /* Optional: gives padding a background */
+/* Footer */
+footer {
+  position: relative;
+  clear: both;
+  text-align: center;
+  background: #6600cc;
+  color: white;
+  padding: 1rem;
+  font-size: 0.9rem;
 }

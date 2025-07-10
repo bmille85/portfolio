@@ -3,13 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Everyday Meals | My Portfolio</title>
+  <title>Wok Cuisine | Brittany Miller</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-
     <nav>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="My Portfolio Logo">
+      </a>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="portfolio.html">Portfolio</a>
@@ -17,34 +19,43 @@
     </nav>
   </header>
 
-  <section class="project-hero">
-    <div class="container">
-      <h1>Everyday Meals</h1>
-      <p>Description here.</p>
-      <a href="portfolio.html" class="btn">← Back to Portfolio</a>
-    </div>
-  </section>
+  <main>
+    <section class="project-hero">
+      <div class="container">
+        <h1>Wok Cuisine</h1>
+        <p>Wok Asian Cuisine is a restaurant website developed as a front-end implementation project. This project required translating provided design wireframes into responsive, accessible, and well-structured code using only HTML and CSS. The homepage had a fixed layout, while the contact page had general content requirements but offered more creative freedom. The project emphasized clean structure, functional responsiveness, and usability.</p>
+        <a href="portfolio.html" class="btn">← Back to Portfolio</a>
+      </div>
+    </section>
 
-  <section class="project-detail">
-    <div class="container">
-      <img src="images/project1-mockup.jpg" alt="Project One Mockup" class="project-image" />
-      
-      <h3>About This Project</h3>
-      <p>Write-up about project here.</p>
-      
-      <h3>My Role</h3>
-      <p>Front-end developer & designer. I created wireframes, chose typography, built the site structure, and implemented all visual styles.</p>
-      
-      <h3>Tools Used</h3>
-      <ul>
-        <li>HTML5 & CSS3</li>
-        <li>Adobe XD for wireframing</li>
-        <li>InDesign for Logo and Branding meterials</li>
-      </ul>
-      
-      <a href="https://live-project-link.com" class="btn">View Live Project</a>
-    </div>
-  </section>
+    <section class="project-detail">
+      <div class="container">
+        <img src="images/wok-wireframe.png" alt="Wok Cuisine Wireframe" class="project-image" />
+        <img src="images/wok-contact.png" alt="Wok Cuisine Contact Page" class="project-image" />
+
+        <h3>About This Project</h3>
+        <p>Many small restaurant websites suffer from poor layout structure and non-responsive forms, which can frustrate users and lead to lost business opportunities. My challenge was to faithfully translate the given visual design into code while ensuring the following: responsive behavior across devices, semantic/organized HTML structure, and usable/accessible form inputs on the contact page.</p>
+
+        <p><strong>HTML & CSS Development:</strong> I started by translating the homepage wireframe exactly as provided, using semantic HTML tags for better accessibility. I prioritized logical document flow to support screen readers and assistive technologies. I also added subtle styling details to enhance visual hierarchy, such as form borders, heading styles, and spacing.</p>
+
+        <p><strong>Responsive Design:</strong> I implemented media queries to ensure the layout adapts to multiple screen sizes. I ensured form fields remained legible and functional on both desktop and mobile devices. I adjusted image sizes and layout wrapping to preserve balance between text and visuals.</p>
+
+        <p><strong>Contact Form:</strong> I created a fully functional HTML form including required fields with clear labels, email/phone radio button selector, reset and submit functionality. I also debugged layout issues related to spacing, field wrapping, and alignment during responsiveness testing.</p>
+
+        <p><strong>Feedback & Refinement:</strong> I received peer feedback to reduce visual clutter around the form fields. I also improved the contrast and spacing for better readability. I ensured the tab-order worked logically for keyboard users.</p>
+
+        <p>The final deliverable was a clean, functional, and responsive website that met all the parameters. Key features were pixel-accurate homepage layout based on the wireframe, custom-designed contact form with validation-ready inputs, fully responsive styling using custom CSS, and attention to detail in form usability and mobile accessibility.</p>
+
+        <h3>Tools Used</h3>
+        <ul>
+          <li>HTML5 & CSS3</li>
+          <li>Adobe XD for wireframing</li>
+        </ul>
+
+        <a href="wok-cuisine/index.html" target="_blank" rel="noopener noreferrer" class="btn">View Live Project</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Brittany Miller. All rights reserved.</p>
